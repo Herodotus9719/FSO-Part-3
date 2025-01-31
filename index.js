@@ -6,6 +6,10 @@ const app = express();
 
 morgan.token("content", (req) => JSON.stringify(req.body));
 app.use(cors());
+
+// Rendering the frontend if it exists in dist folder:
+app.use(express.static("dist"));
+
 app.use(express.json());
 app.use(
     morgan(
