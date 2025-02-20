@@ -35,7 +35,7 @@ if (password && terminalName && terminalNumber) {
         mongoose.connection.close();
     });
 } else if (password) {
-    console.log(`Phonebook:`);
+    console.log("Phonebook:");
     Person.find({}).then((result) => {
         result.forEach((person) => {
             console.log(`${person.name} ${person.number}`);
